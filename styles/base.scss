@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    border: none;
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style-type: none;
+}
+
+.wrap {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px 120px;
+}
+
+.wrap-no-vert {
+    padding: 0px 25px;
+}
+
+.wrap-no-hor {
+    padding: 15px 0px;
+}
+
+.input {
+    border: 1px solid var(--border-light);
+    border-radius: 5px;
+    font-family: var(--font-main);
+    font-size: var(--small);
+    font-weight: 200;
+    padding: 1rem 1rem;
+    min-width: 250px;
+    transition: all .2s ease-in;
+}
+
+.input:focus {
+    border: 1px solid blue;
+    outline: 0;
+    transition: all .2s ease-in;
+}
+
+.btn {
+    background-color: var(--black);
+    border-radius: 5px;
+    color: var(--white);
+    cursor: pointer;
+    font-size: var(--small);
+    letter-spacing: .7px;
+    min-width: 175px;
+    padding: 1rem 1rem;
+    text-align: left;
+    transition: all .2s ease-in;
+    vertical-align: top;
+}
+
+.btn__after svg {
+    animation: grow-shrink 1s ease-in-out infinite alternate-reverse;
+    fill: var(--white);
+    margin-left: 35px;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+
+@keyframes grow-shrink {
+    from {transform: scale(1)}
+    to {transform: scale(1.25)}
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: blue;
+    outline: none;
+    transform: translateY(-5px);
+    transition: all .2s ease-in;
+}
+
+.btn:active {
+    background-color: var(--black);
+    transform: translateY(0px);
+    transition: all .2s ease-in;
+}
+
+@media (max-width: 700px) {
+    .wrap {
+        padding: 10px;
+    }
+}

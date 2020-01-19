@@ -1,0 +1,21 @@
+.header {
+    align-items: center;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding: 20px 15px;
+}
+
+.header__logo {
+    width: 150px;
+}
+
+.header__nav-link {
+    color: var(--gray);
+    font-family: var(--font-main);
+    font-size: var(--med);
+    font-weight: 300;
+    text-decoration: none;
+}
