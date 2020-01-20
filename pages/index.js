@@ -10,9 +10,9 @@ export default (props) => {
     return (
         <>
         <Meta
-            pageTitle="Welcome to connections that matter"
-            description=""
-            img=""
+            pageTitle="Welcome"
+            description="A platform focused on your most meaningful connections."
+            img="/images/logo_black@2x.jpg"
         />
         <Head />
         <Header />
