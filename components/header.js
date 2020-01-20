@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const header = (props) => {
     return (
-        <Headroom>
+        // <Headroom>
             <header className="header">
                 <div className="header__left">
                     <Link href="/">
@@ -15,17 +15,17 @@ const header = (props) => {
                 </div>
                 <nav className="header__nav">
                     <ul className="header__nav-list">
-                        <li>
+                        {/* <li>
                             <Link href="/bla">
                                 <a className="header__nav-link">
-                                    Bla
+                                    Placeholder
                                 </a>
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </nav>
             </header>
-        </Headroom>
+        // </Headroom>
     )
 }
 

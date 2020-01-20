@@ -60,6 +60,10 @@ li {
     vertical-align: top;
 }
 
+.btn__after {
+    float: right;
+}
+
 .btn__after svg {
     animation: grow-shrink 1s ease-in-out infinite alternate-reverse;
     fill: var(--white);
@@ -67,11 +71,6 @@ li {
     height: 20px;
     width: 20px;
     vertical-align: middle;
-}
-
-@keyframes grow-shrink {
-    from {transform: scale(1)}
-    to {transform: scale(1.25)}
 }
 
 .btn:hover,

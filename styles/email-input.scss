@@ -51,3 +51,30 @@
     height: 25px;
     width: 25px;
 }
+
+@media (max-width: 700px) {
+    .email-input__btn {
+        margin: 15px 0 0 0;
+        width: 100%;
+    }
+
+    .email-input__input {
+        width: 100%;
+    }
+
+    // .email-input__label {
+    //     position: static;
+    // }
+    // .email-input__email-success {
+    //     position: static;
+    // }
+    // .email-input__email-success-text {
+    //     position: static;
+    // }
+    // .email-input__email-failure-text {
+    //     position: static;
+    // }
+    // .email-input__email-failure {
+    //     margin: 15px 0;
+    // }
+}
