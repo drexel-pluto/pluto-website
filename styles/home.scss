@@ -1,7 +1,8 @@
 .home-block-1 {
     display: flex;
     flex-direction: var(--resp-flex-direction);
-    min-height: 80vh;
+    height: 500px;
+    margin: 0 auto;
 }
 
 .home-block-1__img {
