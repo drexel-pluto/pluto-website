@@ -6,6 +6,7 @@
 }
 
 .home-block-1__img {
+    border-radius: 5px;
     display: block;
     margin-left: auto;
     object-fit: cover;
@@ -16,7 +17,7 @@
 .home-block-1__text-section {
     align-items: center;
     display: flex;
-    padding: 0px 10px 10px 50px;
+    padding: 0px 10px 0px 0px;
 }
 
 .home-block-1__main-text {
@@ -28,11 +29,6 @@
     margin: 50px 0 0 0;
     position: relative;
 }
-
-.home-block-1__text-section {
-    padding: 10px;
-}
-
 
 @media (max-width: 700px) {
     .home-block-1 {

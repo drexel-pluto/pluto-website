@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Head from '../utils/headLinks';
 import Meta from '../utils/meta'
 import Header from '../components/header';
@@ -17,7 +17,7 @@ export default (props) => {
         <Head />
         <Header />
         <main>
-            <div className="home__block home-block-1">
+            <div className="home__block home-block-1 wrap wrap-no-hor">
                 <div className="home-block-1__text-section">
                     <div>
                         <h2 className="home-block-1__main-text">Making connections <strong>meaningful</strong> again</h2>
