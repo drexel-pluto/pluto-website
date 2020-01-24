@@ -8,6 +8,7 @@
 }
 
 html {
+    background-color: var(--pluto-dark);
     scroll-behavior: smooth;
 }
 
@@ -30,8 +31,10 @@ li {
 }
 
 .input {
-    border: 1px solid var(--border-light);
+    background-color: var(--pluto-dark);
+    border: 1px solid var(--pluto-sea);
     border-radius: 5px;
+    color: var(--pluto-sea);
     font-family: var(--font-main);
     font-size: var(--small);
     font-weight: 200;
@@ -41,50 +44,13 @@ li {
 }
 
 .input:focus {
-    border: 1px solid blue;
+    border: 1px solid var(--pluto-peri);
     outline: 0;
     transition: all .2s ease-in;
 }
 
-.btn {
-    background-color: var(--black);
-    border-radius: 5px;
-    color: var(--white);
-    cursor: pointer;
-    font-size: var(--small);
-    letter-spacing: .7px;
-    min-width: 175px;
-    padding: 1rem 1rem;
-    text-align: left;
-    transition: all .2s ease-in;
-    vertical-align: top;
-}
-
-.btn__after {
-    float: right;
-}
-
-.btn__after svg {
-    animation: grow-shrink 1s ease-in-out infinite alternate-reverse;
-    fill: var(--white);
-    margin-left: 35px;
-    height: 20px;
-    width: 20px;
-    vertical-align: middle;
-}
-
-.btn:hover,
-.btn:focus {
-    background-color: blue;
-    outline: none;
-    transform: translateY(-5px);
-    transition: all .2s ease-in;
-}
-
-.btn:active {
-    background-color: var(--black);
-    transform: translateY(0px);
-    transition: all .2s ease-in;
+.input::placeholder {
+    color: var(--pluto-peri);
 }
 
 @media (max-width: 700px) {

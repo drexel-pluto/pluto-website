@@ -4,6 +4,13 @@ import checkmark from '../animations/checkmark-success.json'
 import fetch from 'isomorphic-unfetch';
 import validator from 'email-validator';
 
+const checkmarkAnimOptions = {
+    loop: false,
+    autoplay: true,
+    prerender: false,
+    animationData: checkmark,
+    setSpeed: 0.1
+}
 class EmailInput extends React.Component {
     constructor(props) {
         super(props);
@@ -11,7 +18,7 @@ class EmailInput extends React.Component {
         this.state = {
             emailSentSuccess: false,
             errMsg: "",
-            defaultErrMsg: "Hmm... something went wrong. Please refresh your page or try again in a little bit.",
+            defaultErrMsg: "Sorry, something’s wrong. Please refresh or try again later.",
             sentEmail: ""
         };
     
@@ -30,9 +37,9 @@ class EmailInput extends React.Component {
     async checkParams (email) {
         if (email.length <= 0) { return Promise.reject({show: true, msg: 'Please enter your email before submitting.'}) }
         if (email.length > 75) { return Promise.reject({show: true, msg: 'Please use a shorter email address.'}) }
-        if (!email.slice().includes('@')) { return Promise.reject({show: true, msg: 'Invalid email provided. Missing an @?'}) }
-        if (!email.slice().includes('.')) { return Promise.reject({show: true, msg: 'Invalid email provided. Missing a dot?'}) }
-        if (!validator.validate(email)) { return Promise.reject({show: true, msg: 'Invalid email'})}
+        if (!email.slice().includes('@')) { return Promise.reject({show: true, msg: 'Did you forget an @?'}) }
+        if (!email.slice().includes('.')) { return Promise.reject({show: true, msg: 'Did you forget a dot?'}) }
+        if (!validator.validate(email)) { return Promise.reject({show: true, msg: 'Sorry, we can’t use this email. Please try a different one.'})}
         return;
     }
     
@@ -86,18 +93,10 @@ class EmailInput extends React.Component {
     }
 
     render () {
-        const checkmarkAnimOptions = {
-            loop: false,
-            autoplay: true,
-            prerender: false,
-            animationData: checkmark,
-            setSpeed: 0.1
-        }
-    
         const success = (this.state.emailSentSuccess)
         ? (
             <div id="email-input__email-success" className="email-input__email-success">
-                <p className="email-input__email-success-text">Nice! We'll send you an invite to join shortly.</p>
+                <p className="email-input__email-success-text">Your interest means the world to us! An invitation to join will be sent shortly.</p>
                 <div className="email-input__checkmark">
                     <Lottie options={checkmarkAnimOptions} speed={0.25} />
                 </div>

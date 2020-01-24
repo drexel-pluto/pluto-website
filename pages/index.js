@@ -23,8 +23,8 @@ export default (props) => {
                         <h2 className="home-block-1__main-text">Making connections <strong>meaningful</strong> again</h2>
                         <div className="home-block-1__input-section">
                             <EmailInput
-                                buttonText = "Request Early Access"
-                                label="Help us make Pluto great before launch!"
+                                buttonText = "Keep in touch"
+                                label="Help make Pluto special before launch"
                             />
                         </div>
                     </div>

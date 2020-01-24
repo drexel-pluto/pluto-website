@@ -5,11 +5,11 @@ import Link from 'next/link'
 const header = (props) => {
     return (
         // <Headroom>
-            <header className="header">
+            <header className="header wrap">
                 <div className="header__left">
                     <Link href="/">
                         <a>
-                            <Image className="header__logo" src="/images/logo_black@2x.png" alt="Pluto" />
+                            <Image className="header__logo" src="/images/logo_white@2x.png" alt="Pluto" />
                         </a>
                     </Link>
                 </div>

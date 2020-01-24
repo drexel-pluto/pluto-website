@@ -1,5 +1,6 @@
 :root {
-    --black: #000000;
+    // --black: #000000;
+    --black: #0C0443;
     --white: #FFFFFF;
     --gold: #F7C500;
     --faded-gold: #f7c596;
@@ -10,6 +11,16 @@
     --border-light: #CACACA;
     --failure-bg: #FFCBC7;
     --failure-text: #850900;
+
+    --pluto-purple: #6237F4;
+    --pluto-peri: #B0B6FF;
+    --pluto-pink: #FE9F9F;
+    --pluto-dark: #0C0443;
+    --pluto-cream: #FFEDBF;
+    --pluto-sea: #78EDDE;
+
+    --main-color: var(--pluto-peri);
+    --accent-color: var(--pluto-sea);
 
     --font-decorative: "Bebas Neue", Arial, sans-serif;
     --font-main: "Source Sans Pro", Arial, sans-serif;

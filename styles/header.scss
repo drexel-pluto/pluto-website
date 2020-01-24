@@ -1,11 +1,10 @@
 .header {
     align-items: center;
-    background-color: var(--white);
+    background-color: var(--pluto-dark);
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: var(--max-width);
-    padding: 20px 15px;
+    padding: 15px 0px;
 }
 
 .header__logo {
