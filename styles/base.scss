@@ -8,7 +8,7 @@
 }
 
 html {
-    background-color: var(--pluto-dark);
+    background-color: var(--white);
     scroll-behavior: smooth;
 }
 
@@ -31,10 +31,10 @@ li {
 }
 
 .input {
-    background-color: var(--pluto-dark);
-    border: 1px solid var(--pluto-sea);
+    background-color: var(--white);
+    border: 1px solid var(--pluto-dark);
     border-radius: 5px;
-    color: var(--pluto-sea);
+    color: var(--pluto-dark);
     font-family: var(--font-main);
     font-size: var(--small);
     font-weight: 200;
@@ -50,7 +50,8 @@ li {
 }
 
 .input::placeholder {
-    color: var(--pluto-peri);
+    color: var(--pluto-dark);
+    font-size: var(--small);
 }
 
 @media (max-width: 700px) {

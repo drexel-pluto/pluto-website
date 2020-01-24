@@ -9,7 +9,7 @@ const header = (props) => {
                 <div className="header__left">
                     <Link href="/">
                         <a>
-                            <Image className="header__logo" src="/images/logo_white@2x.png" alt="Pluto" />
+                            <Image className="header__logo" src="/images/logo_blue@2x.png" alt="Pluto" />
                         </a>
                     </Link>
                 </div>

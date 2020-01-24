@@ -75,6 +75,11 @@ class EmailInput extends React.Component {
                     throw Error(res.statusText);
                 }
                 this.setState({ emailSentSuccess: true });
+
+                // Clear input after submitting
+                setTimeout(() => {
+                    document.getElementById('email-input__email').value = '';
+                }, 500);
             } catch (err) {
                 if (err.show) {
                     const msg = err.msg;

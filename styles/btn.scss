@@ -1,6 +1,6 @@
 .btn {
     background-color: var(--pluto-sea);
-    border: 1px solid var(--pluto-dark);
+    border: 1px solid transparent;
     border-radius: 5px;
     color: var(--pluto-dark);
     cursor: pointer;
@@ -21,8 +21,8 @@
     animation: grow-shrink 1s ease-in-out infinite alternate-reverse;
     fill: var(--pluto-dark);
     margin-left: 35px;
-    height: 20px;
-    width: 20px;
+    height: 16px;
+    width: 16px;
     vertical-align: middle;
 }
 
