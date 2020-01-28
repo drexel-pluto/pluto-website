@@ -1,5 +1,5 @@
 .btn {
-    background-color: var(--pluto-sea);
+    background-color: var(--pluto-peri);
     border: 1px solid transparent;
     border-radius: 5px;
     color: var(--pluto-dark);
@@ -29,8 +29,8 @@
 .btn:hover,
 .btn:focus {
     background-color: var(--pluto-dark);
-    border: 1px solid var(--pluto-sea);
-    color: var(--pluto-sea);
+    border: 1px solid var(--pluto-peri);
+    color: var(--pluto-peri);
     outline: none;
     transform: translateY(-5px);
     transition: all .2s ease-in;
@@ -38,18 +38,18 @@
 
 .btn:hover svg,
 .btn:focus svg {
-    fill: var(--pluto-sea);
+    fill: var(--pluto-peri);
     transition: all .2s ease-in;
 }
 
 .btn:active {
-    background-color: var(--pluto-sea);
+    background-color: var(--pluto-peri);
     color: var(--white);
     transform: translateY(0px);
     transition: all .2s ease-in;
 }
 
 .btn:active svg {
-    fill: var(--pluto-sea);
+    fill: var(--pluto-peri);
     transition: all .2s ease-in;
 }

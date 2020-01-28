@@ -5,7 +5,7 @@ import Link from 'next/link'
 const header = (props) => {
     return (
         // <Headroom>
-            <header className="header wrap">
+            <header className="header wrap wrap-no-hor">
                 <div className="header__left">
                     <Link href="/">
                         <a>

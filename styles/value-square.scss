@@ -1,0 +1,41 @@
+.value-square {
+    align-items: flex-start;
+    color: var(--main-color);
+    display: flex;
+    width: 500px;
+}
+
+.value-square__text-container {
+    margin: 0 0 0 25px;
+}
+
+.value-square__title {
+    font-size: var(--med);
+    font-weight: 400;
+}
+
+.value-square__text {
+    color: var(--faded);
+    font-size: var(--small);
+    font-weight: 300;
+    margin: 25px 0 0 0;
+}
+
+.value-square__img {
+    border-radius: 50px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    width: 120px;
+}
+
+.value-square__img svg {
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    .value-square {
+        width: 100%;
+    }
+}
