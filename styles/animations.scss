@@ -23,3 +23,14 @@
         transform: translateY(0px);
     }
 }
+
+@keyframes slide-grow {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateX(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.0) translateX(0px);
+    }
+}

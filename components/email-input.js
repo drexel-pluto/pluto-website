@@ -14,23 +14,35 @@ const checkmarkAnimOptions = {
 class EmailInput extends React.Component {
     constructor(props) {
         super(props);
-    
+
         this.state = {
             emailSentSuccess: false,
             errMsg: "",
             defaultErrMsg: "Sorry, something’s wrong. Please refresh or try again later.",
-            sentEmail: ""
+            sentEmail: "",
+            typedEmail: "",
+            container: null
         };
-    
+
         this.postEmail = this.postEmail.bind(this);
         this.unfocusButton = this.unfocusButton.bind(this);
         this.checkParams = this.checkParams.bind(this);
         this.hideMessages = this.hideMessages.bind(this);
         this.clickEmailSubmit = this.clickEmailSubmit.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
+    }
+
+    componentDidMount () {
+        const container = document.getElementsByClassName(`email-input-${this.props.uid}`)[0];
+        this.setState({ container });
+    }
+
+    handleInputChange (event) {
+        return this.setState({ typedEmail: event.target.value });
     }
 
     unfocusButton () {
-        const button = document.getElementsByClassName('email-input__btn')[0];
+        const button = this.state.container.getElementsByClassName('email-input__btn')[0];
         button.blur();
     }
 
@@ -42,7 +54,7 @@ class EmailInput extends React.Component {
         if (!validator.validate(email)) { return Promise.reject({show: true, msg: 'Sorry, we can’t use this email. Please try a different one.'})}
         return;
     }
-    
+
     async checkSameEmail (email) {
         if (email == this.state.sentEmail) { return Promise.reject({ silent: true, msg: 'Email didnt change.' })}
         return;
@@ -50,21 +62,21 @@ class EmailInput extends React.Component {
 
     hideMessages () {
         this.setState({ emailSentSuccess: false });
-        const inputLabel = document.getElementById('email-input__label'); 
-        const failureMessage = document.getElementById('email-input__email-failure'); 
+        const inputLabel = this.state.container.getElementsByClassName('email-input__label')[0];
+        const failureMessage = this.state.container.getElementsByClassName('email-input__email-failure')[0]; 
         inputLabel.style.display = "none";
         failureMessage.style.display = "none";
     }
 
     async postEmail () {
-        const email = document.getElementById('email-input__email').value; 
+        const email = this.state.typedEmail; 
         return await fetch(`/api/email/${email}`);
     }
-    
+
     clickEmailSubmit () {
         (async () => {
             try {
-                const email = document.getElementById('email-input__email').value; 
+                const email = this.state.typedEmail;
                 this.setState({ sentEmail: email });
                 this.unfocusButton();
                 await this.checkSameEmail(email);
@@ -76,9 +88,10 @@ class EmailInput extends React.Component {
                 }
                 this.setState({ emailSentSuccess: true });
 
-                // Clear input after submitting
+                // Clear inputs after submitting
                 setTimeout(() => {
-                    document.getElementById('email-input__email').value = '';
+                    const inputs = this.state.container.getElementsByClassName('email-input__input')[0];
+                    Array.from(inputs).forEach(input => { input.value = '' });
                 }, 500);
             } catch (err) {
                 if (err.show) {
@@ -89,7 +102,7 @@ class EmailInput extends React.Component {
                 }
 
                 if (!err.silent) {
-                    const failureMessage = document.getElementById('email-input__email-failure'); 
+                    const failureMessage = this.state.container.getElementsByClassName('email-input__email-failure')[0]; 
                     failureMessage.style.display = "block";
                     console.log(err);
                 }
@@ -100,18 +113,22 @@ class EmailInput extends React.Component {
     render () {
         const success = (this.state.emailSentSuccess)
         ? (
-            <div id="email-input__email-success" className="email-input__email-success">
+            <div className="email-input__email-success">
                 <p className="email-input__email-success-text">Your interest means the world to us! An invitation to join will be sent shortly.</p>
                 <div className="email-input__checkmark">
                     <Lottie options={checkmarkAnimOptions} speed={0.25} />
                 </div>
             </div> 
           )
-        : <p id="email-input__label" className="email-input__label">{this.props.label}</p>;
+        : <p className="email-input__label">{this.props.label}</p>;
+
+
+        const buttonClass = (this.props.inverseButton) ? 'btn btn--inverse' : 'btn';
+
         return (
-            <div className="email-input">
-                <input id="email-input__email" className="input email-input__input" type="email" name="email" placeholder="email@plutosocial.io" />
-                <button className="btn email-input__btn" type="submit" onClick={ this.clickEmailSubmit }>
+            <div className={`email-input ${this.props.className} email-input-${this.props.uid}`}>
+                <input onChange={this.handleInputChange} className="input email-input__input" type="email" name="email" placeholder="email@plutosocial.io" />
+                <button className={`${buttonClass} email-input__btn`} type="submit" onClick={ this.clickEmailSubmit }>
                     {this.props.buttonText}
                     <span className="btn__after">
                         <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
@@ -120,7 +137,7 @@ class EmailInput extends React.Component {
 
                 {success}
 
-                <div id="email-input__email-failure" className="email-input__email-failure">
+                <div className="email-input__email-failure">
                     <p className="email-input__email-failure-text">{this.state.errMsg}</p>
                 </div>
             </div>

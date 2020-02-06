@@ -18,7 +18,7 @@
 }
 
 .btn__after svg {
-    animation: grow-shrink 1s ease-in-out infinite alternate-reverse;
+    animation: slide-grow 1.5s ease-in-out infinite;
     fill: var(--pluto-dark);
     margin-left: 35px;
     height: 16px;
@@ -52,4 +52,34 @@
 .btn:active svg {
     fill: var(--pluto-peri);
     transition: all .2s ease-in;
+}
+
+.btn--inverse {
+    background-color: var(--pluto-dark);
+    color: var(--pluto-peri);
+}
+
+.btn--inverse svg {
+    fill: var(--pluto-peri);
+}
+
+.btn--inverse:hover,
+.btn--inverse:focus {
+    background-color: var(--pluto-peri);
+    border: 1px solid var(--pluto-dark);
+    color: var(--pluto-dark);
+}
+
+.btn--inverse:hover svg,
+.btn--inverse:focus svg {
+    fill: var(--pluto-dark);
+}
+
+.btn--inverse:active {
+    background-color: var(--pluto-dark);
+    color: var(--white);
+}
+
+.btn--inverse:active svg {
+    fill: var(--pluto-dark);
 }

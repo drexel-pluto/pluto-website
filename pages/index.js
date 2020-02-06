@@ -5,6 +5,7 @@ import Header from '../components/header';
 import Image from '../components/image';
 import EmailInput from '../components/email-input'
 import ValueSquare from '../components/value-square';
+import Footer from '../components/footer';
 
 export default (props) => {
     return (
@@ -25,6 +26,7 @@ export default (props) => {
                             <EmailInput
                                 buttonText = "Keep in touch"
                                 label="Help make Pluto special before launch"
+                                uid="from-home-1"
                             />
                         </div>
                     </div>
@@ -123,7 +125,7 @@ export default (props) => {
                     </svg>
                 </div>
                 <div className="home-block-3__custom-wrap">
-                    <h2 className="home-block__title home-block-3__title">It's time for content that <strong>matters</strong></h2>
+                    <h2 className="home-block__title home-block-3__title">It's time for content that <strong>matters.</strong></h2>
                     <p className="home-block__subtitle home-block-3__subtitle">We’re dedicated to your privacy and keeping your connections meaningful. These are some of the features that makes Pluto special.</p>
                 </div>
                 <div className="home-block-3__wrapper wrap wrap-no-vert">
@@ -144,7 +146,7 @@ export default (props) => {
                 </div>
             </div>
             <div className="home-block home-block-4 wrap wrap-no-hor">
-                <h2 className="home-block__title">The mindful social network</h2>
+                <h2 className="home-block__title">The mindful social network.</h2>
                 <p className="home-block__subtitle">At Pluto, we’re always making mental health a priority. The focus is on wholesome activity, which is why we’ve made some changes to what you’re used to.</p>
                 <div className="home-block-4__value-container">
                     <ValueSquare
@@ -163,7 +165,20 @@ export default (props) => {
                     />
                 </div>
             </div>
+            <div className="home-block-5">
+                <div className="wrap wrap-no-hor">
+                    <h2 className="home-block-5__title">Let us know you're interested!</h2>
+                    <EmailInput
+                        buttonText = "Keep in touch"
+                        label=""
+                        className="home-block-5__email-input"
+                        inverseButton
+                        uid="from-home-2"
+                    />
+                </div>
+            </div>
         </main>
+        <Footer />
     </>
     )
 }

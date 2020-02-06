@@ -1,0 +1,35 @@
+.footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+}
+
+.footer__nav {
+    margin: 0 0 25px 0;
+}
+
+.footer__list-item {
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.footer__nav-link {
+    border-bottom: 1px solid var(--pluto-peri);
+    color: var(--white);
+    display: inline-block;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+.footer__copyright {
+    color: var(--pluto-peri);
+    font-weight: lighter;
+    margin: 50px 0 0 0;
+}
+
+@media (max-width: 700px) {
+    .footer__list-item {
+        display: block;
+        margin: 0 0 25px 0;
+    }
+}

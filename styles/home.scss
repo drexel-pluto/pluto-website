@@ -127,11 +127,11 @@
 
 .home-block-3__img {
     padding-bottom: 100px;
-    width: 300px;
+    width: 250px;
 }
 
 .home-block-3__text-container .home-block-3__value:first-child {
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 .home-block-3__value-title {
@@ -156,6 +156,23 @@
 
 .home-block-4__value-square {
     margin-bottom: 85px;
+}
+
+.home-block-5 {
+    background-color: var(--pluto-peri);
+    display: flex;
+    padding: 15px 0 50px 0;
+}
+
+.home-block-5__title {
+    font-weight: 400;
+    margin: 0 0 50px 0;
+    text-align: center;
+}
+
+.home-block-5__email-input {
+    display: inline-block;
+    margin: 0 auto;
 }
 
 @media (max-width: 700px) {
