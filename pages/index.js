@@ -130,6 +130,7 @@ export default (props) => {
                 </div>
                 <div className="home-block-3__wrapper wrap wrap-no-vert">
                     <div className="home-block-3__container">
+                        <Image className="home-block-3__img" alt="" src="/images/iso_phone_opt.png" />
                         <div className="home-block-3__text-container">
                             <div className="home-block-3__value">
                                 <h3 className="home-block-3__value-title">No Advertisements</h3>
@@ -140,7 +141,6 @@ export default (props) => {
                                 <p className="home-block-3__value-text">Designed for humans, not corporations.</p>
                             </div>
                         </div>
-                        <Image className="home-block-3__img" alt="" src="/images/interface.jpg" />
                     </div>
 
                 </div>

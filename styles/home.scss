@@ -78,7 +78,7 @@
 }
 
 .home-block-3 {
-    background-color: var(--pluto-dark);
+    background-color: var(--pluto-peri);
     padding-top: 0;
     padding-bottom: 0; 
     position: relative;
@@ -93,7 +93,7 @@
 }
 
 .home-block-3__title {
-    color: var(--white);
+    color: var(--dark);
 }
 
 .home-block-3__bg {
@@ -127,7 +127,7 @@
 
 .home-block-3__img {
     padding-bottom: 100px;
-    width: 250px;
+    width: 400px;
 }
 
 .home-block-3__text-container .home-block-3__value:first-child {
@@ -135,15 +135,16 @@
 }
 
 .home-block-3__value-title {
-    color: var(--white);
+    color: var(--pluto-dark);
     font-size: var(--big);
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .home-block-3__value-text {
-    color: var(--pluto-peri);
+    color: var(--pluto-dark);
     font-size: var(--small);
-    font-weight: 300;
+    font-weight: 200;
+    padding-left: 3px;
 }
 
 .home-block-4__value-container {
