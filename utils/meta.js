@@ -7,6 +7,7 @@ export default (props) => {
     // pageTitle
     // description
     // img
+    const logoImage = './images/color_dark@3x.jpg'
     return(
         <NextSeo
             title={`${props.pageTitle} | Pluto`}
@@ -18,9 +19,9 @@ export default (props) => {
                 description: props.description,
                 images: [
                 {
-                    url: props.img,
-                    width: 1053,
-                    height: 700,
+                    url: logoImage,
+                    width: 1081,
+                    height: 421,
                     alt: `${props.pageTitle}, Pluto`,
                 }
                 ],
@@ -30,7 +31,7 @@ export default (props) => {
                 handle: '@plutosocial',
                 site: '@site',
                 cardType: 'summary_large_image',
-                image: props.img
+                image: logoImage
             }}
         />
     )

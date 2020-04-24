@@ -15,6 +15,13 @@ const footer = (props) => {
                             </Link>
                         </li>
                         <li className="footer__list-item">
+                            <Link href="/beta">
+                                <a className="footer__nav-link">
+                                    Beta Guide
+                                </a>
+                            </Link>
+                        </li>
+                        <li className="footer__list-item">
                             <Link href="/terms">
                                 <a className="footer__nav-link">
                                     Terms of Service
