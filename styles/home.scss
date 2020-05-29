@@ -176,6 +176,14 @@
     margin: 0 auto;
 }
 
+.video-block__video {
+    width: 100%;
+}
+
+.header__app-store-img {
+    width: 150px;
+}
+
 @media (max-width: 700px) {
     .home-block-1 {
         height: unset;

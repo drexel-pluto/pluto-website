@@ -9,7 +9,7 @@ const header = (props) => {
                 <div className="header__left">
                     <Link href="/">
                         <a>
-                            <Image className="header__logo" src="/images/logo_blue@2x.png" alt="Pluto" />
+                            <Image className="header__logo" src="/images/color_dark@2x.png" alt="Pluto" />
                         </a>
                     </Link>
                 </div>
@@ -22,6 +22,9 @@ const header = (props) => {
                                 </a>
                             </Link>
                         </li> */}
+                        <a className="header__app-store-link" href="https://apps.apple.com/us/app/pluto/id1495230120" target="_blank" rel="noopener noreferrer">
+                            <img className="header__app-store-img" src="./images/app-store.png" alt="Download on the app store" />
+                        </a>
                     </ul>
                 </nav>
             </header>

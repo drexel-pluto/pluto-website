@@ -36,6 +36,11 @@ export default (props) => {
                 {/* </div> */}
                 <Image className="home-block-1__img" src="/images/undraw/spread-love.png" alt="" />
             </div>
+            <div className="home__block video-block">
+                    <video autoPlay muted controls loop className="video-block__video">
+                        <source src="./videos/pluto_promo_1080.mp4" />
+                    </video>
+            </div>
             <div className="home-block home-block-2 wrap wrap-no-hor">
                 <h2 className="home-block__title">A focus on privacy. A focus on you.</h2>
                 {/* <p className="home-block-2__subtitle">We’re dedicated to your privacy and keeping your connections meaningful. These are some of the features that makes Pluto special.</p> */}

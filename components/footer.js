@@ -22,6 +22,16 @@ const footer = (props) => {
                             </Link>
                         </li>
                         <li className="footer__list-item">
+                            <a href="https://drexel-pluto.github.io/contract-book/#/" target="_blank" rel="noopener noreferrer" className="footer__nav-link">
+                                Contract Book
+                            </a>
+                        </li>
+                        <li className="footer__list-item">
+                            <a href="https://pluto417.com" target="_blank" rel="noopener noreferrer" className="footer__nav-link">
+                                Research
+                            </a>
+                        </li>
+                        <li className="footer__list-item">
                             <Link href="/terms">
                                 <a className="footer__nav-link">
                                     Terms of Service
