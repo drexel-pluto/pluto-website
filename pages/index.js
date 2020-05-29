@@ -25,7 +25,7 @@ export default (props) => {
                         <div className="home-block-1__input-section">
                             <EmailInput
                                 buttonText = "Keep in touch"
-                                label="Help make Pluto special before launch"
+                                label="Help make Pluto special"
                                 uid="from-home-1"
                             />
                         </div>

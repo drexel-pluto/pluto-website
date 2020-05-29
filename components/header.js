@@ -23,7 +23,10 @@ const header = (props) => {
                             </Link>
                         </li> */}
                         <a className="header__app-store-link" href="https://apps.apple.com/us/app/pluto/id1495230120" target="_blank" rel="noopener noreferrer">
-                            <img className="header__app-store-img" src="./images/app-store.png" alt="Download on the app store" />
+                            <img className="header__app-store-img" src="./images/app-store.png" alt="Download on the App store" />
+                        </a>
+                        <a className="header__app-store-link" href="https://play.google.com/store/apps/details?id=io.plutosocial.pluto" target="_blank" rel="noopener noreferrer">
+                            <img className="header__app-store-img" src="./images/google-play.png" alt="Download on the Google Play store" />
                         </a>
                     </ul>
                 </nav>
